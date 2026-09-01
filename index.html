@@ -109,6 +109,9 @@
   .style-grid{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;
   }
+  @media (max-width:719px){
+    .style-grid{ grid-template-columns:1fr; }
+  }
   @media (min-width:720px){
     .style-grid > *:nth-child(2){ margin-top:22px; }
   }
@@ -246,6 +249,20 @@
   }
 
   :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+  /* Mobile polish */
+  @media (max-width:480px){
+    .hero{ padding:56px 0; }
+    .hero-card{ padding:28px 22px; }
+    section.block{ padding:44px 0; }
+  }
+  @media (max-width:400px){
+    .wrap, .wrap-wide{ padding:0 16px; }
+    .topbar-inner{ padding:12px 16px; gap:8px; }
+    .brand{ font-size:15px; }
+    .mode-switch button{ padding:6px 11px; font-size:12.5px; }
+    .row-option .row-thumb{ width:52px; height:52px; }
+  }
 </style>
 </head>
 <body class="mode-wedding">
